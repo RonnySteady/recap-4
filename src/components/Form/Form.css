@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  margin: 0, 50%;
+  flex-direction: column;
+}
+
+.submitButton {
+  width: 150px;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.label {
+  margin: 5px;
+}
+
+.inputSection {
+  margin: 5px;
+}
+
+.formHeader {
+  margin: 5px;
+}
