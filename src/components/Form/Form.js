@@ -23,8 +23,8 @@ export default function Form({ onAddActivity }) {
         <input
           type="checkbox"
           name="checkboxInput"
-          // className="checkboxInput"
-          // id="checkboxInput"
+          className="checkboxInput"
+          id="checkboxInput"
         />
       </div>
       <button type="submit" className="submitButton">
