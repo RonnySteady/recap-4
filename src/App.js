@@ -5,7 +5,6 @@ import { uid } from "uid";
 
 function App() {
   const [activities, setActivities] = useState();
-  console.log(activities);
 
   return (
     <div className="App">
