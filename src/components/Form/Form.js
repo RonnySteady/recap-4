@@ -1,12 +1,5 @@
 import "./Form.css";
 
-function handleOnSubmit(event) {
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData);
-  console.log(data.checkboxInput);
-}
-
 export default function Form({ onAddActivity }) {
   return (
     <form className="form" onSubmit={handleOnSubmit}>
@@ -25,21 +18,32 @@ export default function Form({ onAddActivity }) {
       </div>
       <div className="input">
         <label htmlFor="checkboxInput" className="label">
-          <br />
-          <br />
           Good-weather activity:
         </label>
         <input
           type="checkbox"
           name="checkboxInput"
-          className="checkboxInput"
-          id="checkboxInput"
+          // className="checkboxInput"
+          // id="checkboxInput"
         />
       </div>
-      <br />
       <button type="submit" className="submitButton">
         Submit
       </button>
     </form>
   );
+
+  function handleOnSubmit(event) {
+    console.clear();
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+
+    onAddActivity({
+      activityInput: data.activityInput,
+      checkboxInput: event.target.elements.checkboxInput.checked,
+    });
+    event.target.reset();
+    event.target["activityInput"].focus();
+  }
 }

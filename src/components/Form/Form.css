@@ -7,8 +7,17 @@
 .submitButton {
   width: 150px;
   align-self: center;
+  margin-top: 10px;
 }
 
-/*.label {
-  align-self: flex-start;
-}*/
+.label {
+  margin: 5px;
+}
+
+.inputSection {
+  margin: 5px;
+}
+
+.formHeader {
+  margin: 5px;
+}
